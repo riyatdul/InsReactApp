@@ -9,6 +9,10 @@ export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
+    /*
+    Ensure only tab screen file in (tabs) directory.
+    so explore.tsx move out from (tabs) directory.
+    */
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -24,9 +28,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="components"
         options={{
-          title: 'Explore',
+          title: 'Components',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
           ),
