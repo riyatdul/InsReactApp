@@ -23,10 +23,10 @@ export default function HomeScreen() {
         <Button title='Switch' color="#00008b" onPress={()=>router.push("/page/switch_page")}/>
         <Button title='StatusBar' color="#00008b" onPress={()=>router.push("/page/status_bar_page")}/>
         <Button title='ActivityIndicator' color="#00008b" onPress={()=>router.push("/page/activity_indicator_page")}/>
-        <Button title='Modal' color="#00008b"onPress={()=>router.push("/page/modal_page")}/>
+        <Button title='Modal' color="#00008b" onPress={()=>router.push("/page/modal_page")}/>
         <Button title='Alert' color="#00008b" onPress={() => Alert.alert('Left button pressed')}/>
         <View style={styles.divider}></View>
-        <Button title='Layout-Flexbox' color="#ff7f50"/>
+        <Button title='Keyboard Avoiding' color="#ff7f50" onPress={()=>router.push("/page/keyboard_avoid_view_page")}/>
         <Button title='Accessbility' color="#ff7f50"/>
         <Button title='ScrollView (This Page)' color="#ff7f50"/>
         <Button title='ListView-FlatList' color="#ff7f50"/>
