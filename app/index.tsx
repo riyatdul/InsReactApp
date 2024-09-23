@@ -4,6 +4,7 @@ import { HelloWave } from '@/components/HelloWave';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { router } from 'expo-router';
 
 export default function HomeScreen() {
   return (
@@ -14,15 +15,15 @@ export default function HomeScreen() {
       </ThemedView>
       <ScrollView>
         <Button title='Container/Box' color="#00008b"/>
-        <Button title='Text' color="#00008b"/>
-        <Button title='TextInput' color="#00008b"/>
-        <Button title='Pressable' color="#00008b"/>
-        <Button title='Image' color="#00008b"/>
-        <Button title='Image Backgroud' color="#00008b"/>
-        <Button title='Switch' color="#00008b"/>
-        <Button title='StatusBar' color="#00008b"/>
-        <Button title='ActivityIndicator' color="#00008b"/>
-        <Button title='Modal' color="#00008b"/>
+        <Button title='Text' color="#00008b" onPress={()=>router.push("/page/text_page")}/>
+        <Button title='TextInput' color="#00008b" onPress={()=>router.push("/page/input_page")}/>
+        <Button title='Pressable' color="#00008b" onPress={()=>router.push("/page/pressable_page")}/>
+        <Button title='Image' color="#00008b" onPress={()=>router.push("/page/image_page")}/>
+        <Button title='Image Backgroud' color="#00008b" onPress={()=>router.push("/page/image_background_page")}/>
+        <Button title='Switch' color="#00008b" onPress={()=>router.push("/page/switch_page")}/>
+        <Button title='StatusBar' color="#00008b" onPress={()=>router.push("/page/status_bar_page")}/>
+        <Button title='ActivityIndicator' color="#00008b" onPress={()=>router.push("/page/activity_indicator_page")}/>
+        <Button title='Modal' color="#00008b"onPress={()=>router.push("/page/modal_page")}/>
         <Button title='Alert' color="#00008b" onPress={() => Alert.alert('Left button pressed')}/>
         <View style={styles.divider}></View>
         <Button title='Layout-Flexbox' color="#ff7f50"/>
@@ -50,6 +51,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center',
     gap: 8,
   },
