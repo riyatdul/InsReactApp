@@ -1,5 +1,5 @@
-import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { FlatList, RefreshControl, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import React, { useCallback, useState } from 'react'
 
 const DATA = [
     {
@@ -25,12 +25,24 @@ const DATA = [
   );
 
 export default function FlatListPage() {
+    const [refreshing, setRefreshing] = React.useState(false);
+
+    const onRefresh = useCallback(() => {
+        setRefreshing(true);
+        //or fetch api this
+        setTimeout(() => {
+        setRefreshing(false);
+        }, 2000);
+    }, []);
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
         data={DATA}
         renderItem={({item}) => <Item title={item.title} />}
         keyExtractor={item => item.id}
+        refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
       />
     </SafeAreaView>
   )

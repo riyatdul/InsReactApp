@@ -32,7 +32,6 @@ export default function HomeScreen() {
         <Button title='ListView-FlatList' color="#ff7f50" onPress={()=>router.push("/page/flat_list_page")}/>
         <Button title='ListView-SectionList' color="#ff7f50" onPress={()=>router.push("/page/section_list_page")} />
         <Button title='ListView-VirtualizedList' color="#ff7f50" onPress={()=>router.push("/page/virtualized_list_page")}/>
-        <Button title='Refresh Control' color="#ff7f50"/>
         <Button title='Touchables' color="#ff7f50"/>
         <Button title='Gesture Responder System' color="#ff7f50"/>
         <Button title='Scrolling and Swiping' color="#ff7f50"/>
