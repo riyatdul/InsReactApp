@@ -29,8 +29,9 @@ export default function HomeScreen() {
         <Button title='Keyboard Avoiding' color="#ff7f50" onPress={()=>router.push("/page/keyboard_avoid_view_page")}/>
         <Button title='Accessbility' color="#ff7f50"/>
         <Button title='ScrollView (This Page)' color="#ff7f50"/>
-        <Button title='ListView-FlatList' color="#ff7f50"/>
+        <Button title='ListView-FlatList' color="#ff7f50" onPress={()=>router.push("/page/flat_list_page")}/>
         <Button title='ListView-SectionList' color="#ff7f50"/>
+        <Button title='ListView-VirtualizedList' color="#ff7f50"/>
         <Button title='Refresh Control' color="#ff7f50"/>
         <Button title='Touchables' color="#ff7f50"/>
         <Button title='Gesture Responder System' color="#ff7f50"/>
